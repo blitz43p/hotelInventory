@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dawning of a New Day' rel='stylesheet'>
+    <link href='css/my-styles.css' rel='stylesheet'>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+
+    <!-- the div for the error overlay -->
+    <div id="errorOverlay">
+      <p id="errorText"></p>
+    </div>
+
+    <!-- start the hero image -->
+    <div class="hero-image flex">
+
+      <!-- start header -->
+      <div class="header">
+        <span class="glow">
+          <label>Becca's Better Inventory</label>
+        </span>
+      </div>
+      <!-- end header -->
+
+      <!-- start page buttons -->
+      <div class="grid-buttons-container">
+        <button class="page-buttons active-button" id="linen-btn">Linens</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="page-buttons" id="misc-btn">Misc.</button>
+      </div>
+      <!-- end page buttons -->
+
+
+      <!-- begin the linen entry div -->
+      <div class="hero-text" id="linens">
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">Pillow Inserts</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields"  name="pillow-inserts" id="pillow-inserts" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Pillow Cases</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="pillow-cases" id="pillow-cases" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Pillows</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="pillows" id="pillows" size="4" maxlength="4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">King Top Sheets</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="king-top-sheets" id="king-top-sheets" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Queen Top Sheets</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="queen-top-sheets" id="queen-top-sheets" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Bath Mats</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="bath-mat" id="bath-mat" size="4" maxlength="4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">King Fitted Sheets</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="king-fitted-sheets" id="king-fitted-sheets" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Queen Fitted Sheets</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="queen-fitted-sheets" id="queen-fitted-sheets" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Shower Curtains</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="shower-curtain" id="shower-curtain" size="4" maxlength="4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">King Duvets</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" class="glowing-border entry-fields" name="king-duvet" id="king-duvet" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Queen Duvets</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="queen-duvet" id="queen-duvet" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Waffle Blankets</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="waffle-blanket" id="waffle-blanket" data-roomTotal="waffleBlanketRooms" val="0" size="4" maxlength="4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">King Inserts</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="king-inserts" id="king-inserts" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Queen Inserts</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="queen-inserts" id="queen-inserts" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Foldout Fitted Sheets</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="foldout-fitted-sheets" id="foldout-fitted-sheets" size="4" maxlength="4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">Foldout Top Sheets</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="foldout-top-sheets" id="foldout-top-sheets" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Bath Towels</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="bath-towels" id="bath-towels" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Hand Towels</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="hand-towels" id="hand-towels" size="4" maxlength="4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">Face Rags</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="face-rags" id="face-rags" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+          </div>
+          <div class="column" align="right">
+          </div>
+        </div>
+      </div>
+      <!-- end of the linen entry div -->
+
+
+      <!-- begin the misc entry div -->
+      <div class="hero-text" id="misc">
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">Hair Dryer</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields"  name="hair-dryer" id="hair-dryer" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Dryer Bag</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="dryer-bag" id="dryer-bag" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Kleenex</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="kleenex" id="kleenex" size="4" maxlength="4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">Toilet Paper</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="toilet-paper" id="toilet-paper" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Iron</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="iron" id="iron" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Iron Board</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="iron-board" id="iron-board" size="4" maxlength="4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">Luggage Rack</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="luggage-rack" id="luggage-rack" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Desk</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="desk" id="desk" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Desk Chair</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="desk-chair" id="desk-chair" size="4" maxlength="4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">Coffee Pot</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" class="glowing-border entry-fields" name="coffee-pot" id="coffee-pot" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Coffee Tray</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="coffee-tray" id="coffee-tray" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Coffee Basket</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="coffee-basket" id="coffee-basket" size="4" maxlength="4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">Floor Lamp</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="floor-lamp" id="floor-lamp" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Table Lamp</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="table-lamp" id="table-lamp" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Desk Lamp</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="desk-lamp" id="desk-lamp" size="4" maxlength="4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">Mini-Fridge</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="mini-fridge" id="mini-fridge" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Curtains</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" title="All 4 Pieces Of The Curtains Makes 1 Single Curtain Inventory Item" name="curtains" id="curtains" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Bible</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="bible" id="bible" size="4" maxlength="4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">TV</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="tv" id="tv" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">TV Stand</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="tv-stand" id="tv-stand" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">TV Remote</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="tv-remote" id="tv-remote" size="4" maxlength="4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column" align="right">
+            <label class="glow2">Round Trash Can</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="round-trash-can" id="round-trash-can" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Oval Trash Can</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="oval-trash-can" id="oval-trash-can" size="4" maxlength="4">
+          </div>
+          <div class="column" align="right">
+            <label class="glow2">Microwave</label>
+            <br>
+            <input type="text" class="glowing-border entry-fields" name="microwave" id="microwave" size="4" maxlength="4">
+          </div>
+        </div>
+      </div>
+      <!-- end of the misc entry div -->
+
+
+      <!-- start of the totals div -->
+      <div id="totals">
+        <span id="total-label"><label>Totals</label></span>
+        <br>
+        <br>
+        <div class="grid-container-main">
+          <div class='grid-items'>
+            <label>King Top Sheets</label>
+            <br>
+            <input type="text" class="glowing-border totals"  name="king-top-sheets-total" id="king-top-sheets-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>King Fitted Sheets</label>
+            <br>
+            <input type="text" class="glowing-border totals"  name="king-fitted-sheets-total" id="king-fitted-sheets-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>King Duvets</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="king-duvet-total" id="king-duvet-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>King Inserts</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="king-inserts-total" id="king-inserts-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Face Rags</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="face-rags-total" id="face-rags-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Queen Top Sheets</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="queen-top-sheets-total" id="queen-top-sheets-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Queen Fitted Sheets</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="queen-fitted-sheets-total" id="queen-fitted-sheets-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Queen Duvets</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="queen-duvet-total" id="queen-duvet-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Queen Insert</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="queen-insert-total" id="queen-insert-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Shower Curtain</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="shower-curtain-total" id="shower-curtain-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Pillow Inserts</label>
+            <br>
+            <input type="text" class="glowing-border totals"  name="pillow-inserts-total" id="pillow-inserts-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Pillow Cases</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="pillow-cases-total" id="pillow-cases-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Pillows</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="pillows-total" id="pillows-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Bath Mats</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="bath-mats-total" id="bath-mats-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Foldout Fitted Sheet</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="foldout-fitted-sheet-total" id="foldout-fitted-sheet-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Foldout Top Sheet</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="foldout-top-sheet-total" id="foldout-top-sheet-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Bath Towel</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="bath-towel-total" id="bath-towel-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Hand Towel</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="hand-towel-total" id="hand-towel-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Iron</label>
+            <br>
+            <input type="text" class="glowing-border totals"  name="iron-total" id="iron-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Iron Board</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="iron-board-total" id="iron-board-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Luggage Rack</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="luggage-rack-total" id="luggage-rack-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Coffee Pot</label>
+            <br>
+            <input type="text" class="glowing-border totals"  name="coffee-pot-total" id="coffee-pot-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Coffee Basket</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="coffee-basket-total" id="coffee-basket-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Coffee Tray</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="coffee-tray-total" id="coffee-tray-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Hair Dryer</label>
+            <br>
+            <input type="text" class="glowing-border totals"  name="hair-dryer-total" id="hair-dryer-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Dryer Bag</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="dryer-bag-total" id="dryer-bag-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Toilet Paper</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="toilet-paper-total" id="toilet-paper-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Kleenex</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="kleenex-total" id="kleenex-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Microwave</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="microwave-total" id="microwave-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Mini-Fridge</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="mini-fridge-total" id="mini-fridge-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Desk</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="desk-total" id="desk-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Desk Chair</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="desk-chair-total" id="desk-chair-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Bible</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="bible-total" id="bible-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>TV</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="tv-total" id="tv-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>TV Stand</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="tv-stand-total" id="tv-stand-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>TV Remote</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="tv-remote-total" id="tv-remote-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Floor Lamp</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="floor-lamp-total" id="floor-lamp-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Table Lamp</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="table-lamp-total" id="table-lamp-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Desk Lamp</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="desk-lamp-total" id="desk-lamp-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Curtains</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="curtains-total" id="curtains-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Waffle Blankets</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="waffle-blanket-total" id="waffle-blanket-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Oval Trash Can</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="oval-trash-can-total" id="oval-trash-can-total" size="4" maxlength="4">
+          </div>
+          <div class='grid-items'>
+            <label>Round Trash Can</label>
+            <br>
+            <input type="text" class="glowing-border totals" name="round-trash-can-total" id="round-trash-can-total" size="4" maxlength="4">
+          </div>
+
+        </div>
+      </div>
+      <!-- end of the totals div -->
+
+      <!-- start of the footer div -->
+      <div>
+        <button class="button glow2" id="calculate"><span class="glow2">Calculate</span></button>
+      </div>
+      <!-- end of the footer div -->
+
+    </div>
+
+  </body>
+</html>
