@@ -71,11 +71,8 @@ $(function() {
     $('#calculate').hide();
 
 
-    // hide the linen div
+    // hide the linen and misc divs
     $('#linens').hide();
-
-
-    // hide the misc div
     $('#misc').hide();
 
 
@@ -128,6 +125,18 @@ $(function() {
     $('#table-lamp-total').val(parseInt($('#table-lamp').val()) + tableLampRooms);
     $('#desk-lamp-total').val(parseInt($('#desk-lamp').val()) + deskLamp);
 
+    // loop through all the totals fields
+    $('.totals').each(function() {
+
+      // if the field is not empty
+      if ( $(this).val() != "") {
+
+        // add the glowing border
+        $(this).addClass('glowing-border-active');
+
+      }
+
+    })
 
   })// end of $('#calculate').on("click", function() {
 
@@ -250,42 +259,6 @@ $(function() {
 
   // loop through all the entry fields
   $('.entry-fields').each(function() {
-
-    // if the field is not empty
-    if ($(this).val() != "") {
-
-      // add the glowing border
-      $(this).addClass('glowing-border-active');
-
-    } else {// the field is empty
-
-      // remove the glowing border
-      $(this).removeClass('glowing-border-active');
-
-    }
-
-  })
-
-  // loop through all the totals fields
-  $('.totals').each(function() {
-
-    // if the field is not empty
-    if ( $(this).val() != "") {
-
-      // add the glowing border
-      $(this).addClass('glowing-border-active');
-
-    } else {
-
-      // remove the glowing border
-      $(this).removeClass('glowing-border-active');
-
-    }
-
-  })
-
-  // loop through all the totals fields
-  $('.totals').on("blur", function() {
 
     // if the field is not empty
     if ($(this).val() != "") {
